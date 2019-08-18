@@ -1,0 +1,27 @@
+import math
+
+
+def factors(valor):
+    a=[]
+    y = round(math.sqrt(valor))
+    for i in range(y,1,-1):
+        if valor % i == 0:
+            a.append(i)
+    for x in a:
+        temp= prime(x)
+        if temp != None:
+            return temp
+
+
+def prime(factor):
+    z=[]
+    y = round(math.sqrt(factor))
+    for u in range(2,y,1):
+        if factor % u == 0:
+            z.append(u)
+    if len(z) == 0:
+        return factor
+    else:
+        pass
+
+print(factors(600851475143))
