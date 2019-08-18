@@ -1,0 +1,9 @@
+import math
+
+def small_div(value):
+    r = 1
+    for i in range(2, value+1):
+        r = r * i // math.gcd(r, i)
+    return r
+
+print(small_div(20))
