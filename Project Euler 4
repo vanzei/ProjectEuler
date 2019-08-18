@@ -1,0 +1,22 @@
+def palindrom():
+    a=[]
+    list = []
+    result=[]
+    for x in range(100,1000,1):
+        for y in range (100,1000,1):
+            z=x*y
+            a.append(z)
+    for i in a:
+        u = str (i)
+        if u[0] == u[-1]:
+            if u[1] == u[-2]:
+                if u[2] == u[-3]:
+                    list.append(u)
+
+    for string in list:
+        integer = int (string)
+        result.append(integer)
+        result.sort()
+    return result[-1]
+
+print(palindrom())
