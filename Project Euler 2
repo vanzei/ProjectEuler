@@ -1,0 +1,21 @@
+def fibonacci(limit):
+    a =[]
+    r=[]
+    for i in range(limit):
+        if i == 1 or i ==2:
+            a.append(i)
+
+        elif i>2:
+            a.append(a[i-3] +a[i-2])
+            if a[i-1] > limit:
+                print(a)
+                for x in a:
+                    if x % 2 == 0:
+                        r.append(x)
+                return sum(r)
+
+
+print(fibonacci(4000000))
+
+
+
