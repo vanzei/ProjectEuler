@@ -1,0 +1,14 @@
+def min_mult(value):
+    a=[]
+    b = range(value)
+
+    for values in b:
+        if values % 3 == 0:
+            a.append(values)
+
+        elif values % 5 == 0:
+            a.append(values)
+    return a
+
+print(sum(min_mult(1000)))
+
